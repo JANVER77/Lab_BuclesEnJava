@@ -28,13 +28,13 @@ public class CajeroAutomatico {
                 salir = true;
             }
 
-            saldo = eligirOpcion(opcion, saldo, input);
+            saldo = procesarOpcion(opcion, saldo, input);
 
 
         } while (!salir);
     }
 
-    private static void consultar(int saldo) {
+    private static void consultarSaldo(int saldo) {
         System.out.println("Tiene un saldo de : $" + saldo + "\n\n");
     }
 
@@ -42,9 +42,11 @@ public class CajeroAutomatico {
         System.out.println("Digite el valor que desea retirar : ");
         int retiro = input.nextInt();
         input.nextLine();
-        System.out.println(saldo + retiro);
+        if (retiro > saldo){
+            System.out.println("Fondos insuficientes, consulta tu saldo");
+            return saldo;
+        }
         saldo -= retiro;
-        System.out.println(saldo);
         return saldo;
     }
 
@@ -55,18 +57,18 @@ public class CajeroAutomatico {
         saldo += retiro;
         return saldo;
     }
-    private static int eligirOpcion(int opcion, int saldo, Scanner input){
+    private static int procesarOpcion(int opcion, int saldo, Scanner input){
         switch (opcion){
             case 1:
-                consultar(saldo);
+                consultarSaldo(saldo);
                 break;
             case 2:
                 saldo = retirar(saldo, input);
-                consultar(saldo);
+                consultarSaldo(saldo);
                 break;
             case 3:
                 saldo = depositar(saldo, input);
-                consultar(saldo);
+                consultarSaldo(saldo);
                 break;
             case 4:
                 break;
