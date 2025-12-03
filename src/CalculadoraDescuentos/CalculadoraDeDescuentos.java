@@ -3,7 +3,7 @@ package CalculadoraDescuentos;
 import java.util.Scanner;
 
 public class CalculadoraDeDescuentos {
-    public static void main(String[] args) {
+    public static void calcularCosto() {
         Scanner input = new Scanner(System.in);
         double valorCompra;
 

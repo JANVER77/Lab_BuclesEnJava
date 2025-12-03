@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class ControladorDeAsistencias {
-    public static void main(String[] args) {
+    public static void contralarAsistencias() {
         Scanner input = new Scanner(System.in);
         String presente = "presente";
         String ausente = "ausente";

@@ -3,7 +3,7 @@ package CajaRegistradora;
 import java.util.Scanner;
 
 public class CajaRegistradora {
-    public static void main(String[] args) {
+    public static void registrar() {
         Scanner input = new Scanner(System.in);
         int seleccion;
         int cuenta = 0;

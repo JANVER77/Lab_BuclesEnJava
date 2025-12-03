@@ -3,7 +3,7 @@ package TablaMultiplicarInteractiva;
 import java.util.Scanner;
 
 public class TablaMultiplicarInteractiva {
-    public static void main(String[] args) {
+    public static void multiplicar() {
         Scanner input = new Scanner(System.in);
 
         System.out.println("Ingrese numenro entre 1 - 10: ");
